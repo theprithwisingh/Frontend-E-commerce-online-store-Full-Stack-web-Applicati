@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-around;
     padding: 16px;
-    box-sizing: 0 1px 3px -2px black;
+    box-shadow: 0 1px 3px -2px black;
 }
 
 .nav-logo{

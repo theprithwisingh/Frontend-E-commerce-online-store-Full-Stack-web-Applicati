@@ -1,0 +1,13 @@
+.shop {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: auto;
+    box-sizing: border-box;
+  }
+  .shop > * {
+    margin-bottom: 20px;
+  }
+  
+  .shop > *:last-child {
+    margin-bottom: 0;
+  }

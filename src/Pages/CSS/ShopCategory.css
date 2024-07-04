@@ -1,11 +1,4 @@
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 /* Related Products Styling */
 .relatedproducts {
@@ -36,17 +29,26 @@ body {
 }
 
 /* Shop Category Styling */
+.shop-category {
+    width: 100%;
+    padding: 20px 0;
+}
+
 .shopcategory-banner {
     display: block;
     margin: 30px auto;
     width: 82%;
+    max-width: 1200px;
+    border-radius: 10px;
 }
 
 .shopcategory-indexSort {
     display: flex;
-    margin: 0 170px;
     justify-content: space-between;
     align-items: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
 }
 
 .shopcategory-sort {
@@ -54,10 +56,12 @@ body {
     border-radius: 40px;
     border: 1px solid #888;
     cursor: pointer;
+    transition: background 0.3s, border-color 0.3s;
 }
 
 .shopcategory-sort:hover {
     background: #f0f0f0;
+    border-color: #555;
 }
 
 .shopcategory-indexSort p span {
@@ -65,10 +69,12 @@ body {
 }
 
 .shopcategory-products {
-    margin: 20px 170px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
 }
 
 .shopcategory-loadmore {
@@ -89,4 +95,18 @@ body {
 .shopcategory-loadmore:hover {
     background: #dcdcdc;
     color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .shopcategory-indexSort {
+        margin: 10px 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .shopcategory-products {
+        margin: 10px 20px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }

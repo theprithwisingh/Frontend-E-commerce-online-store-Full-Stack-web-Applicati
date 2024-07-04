@@ -41,15 +41,15 @@ import dropdown_icon from '../Components/Assets/dropdown_icon.png';
 import Item from '../Components/Item/Item';
 
 function ShopCategory({ banner, category }) {
-  const { all_product } = useContext(ShopContext);
-  const filteredProducts = all_product.filter(item => item.category === category);
+  const { all_products } = useContext(ShopContext);
+  const filteredProducts = all_products.filter(item => item.category === category);
 
   return (
     <div className='shop-category'>
       <img className='shopcategory-banner' src={banner} alt="Category Banner" />
       <div className='shopcategory-indexSort'>
         <p>
-          <span>Showing 1-{filteredProducts.length}</span> out of {all_product.length} products
+          <span>Showing 1-{filteredProducts.length}</span> out of {all_products.length} products
         </p>
         <div className='shopcategory-sort'>
           sort by <img src={dropdown_icon} alt="Sort Dropdown" />

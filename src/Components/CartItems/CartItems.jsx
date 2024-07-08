@@ -18,7 +18,7 @@ const CartItems = () => {
         <hr />
         {all_products.map((e)=>{
             if(cartItems[e.id]>0){
-            return <div key={e}>
+            return <div key={e.id}>
             <div className="cartitems-format">
                 <img src={e.image} alt="" className='carticon-product-icon'/>
                 <p>{e.name}</p>
@@ -50,13 +50,13 @@ const CartItems = () => {
                 <h3>${getTotalCartAmount()}</h3>
              </div>
           </div>
-          <button>PROCEED TO CHECKOUT</button>
+          <button id='btn'>PROCEED TO CHECKOUT</button>
          </div>
          <div className='cartitems-promocode'>
           <p>If you have  promo code, Enter it here</p>
           <div className='cartitems-promobox'>
              <input type="text" placeholder='promo code'/>
-             <button>submit</button>
+             <button >submit</button>
           </div>
          </div>
         </div>

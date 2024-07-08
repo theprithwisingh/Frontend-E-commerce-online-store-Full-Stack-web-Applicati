@@ -15,7 +15,6 @@ function Shop() {
       <Offers/>
       <NewCollections/>
       <NewsLetter/>
-      
     </div>
   )
 }

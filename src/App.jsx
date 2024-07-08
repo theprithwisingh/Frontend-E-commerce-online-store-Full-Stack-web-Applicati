@@ -15,7 +15,6 @@ function App() {
     <div>
         <BrowserRouter>
         <Navbar/>
-        
         <Routes>
             <Route path='/' element={<Shop/>}/>
             <Route path='/mens' element={<ShopCategory banner={men_banner} category="men"/>}/>
@@ -29,9 +28,7 @@ function App() {
         </Routes>
         <Footer/>
         </BrowserRouter>
-        
     </div>
   )
 }
-
 export default App;

@@ -236,6 +236,15 @@
   .cartitems-total-item h3 {
     margin: 0;
   }
+  #btn{
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
   
   .cartitems-promocode {
     padding: 20px;
@@ -290,6 +299,8 @@
   
     .cartitems-promobox button {
       margin-top: 10px;
+
+
     }
   }
   

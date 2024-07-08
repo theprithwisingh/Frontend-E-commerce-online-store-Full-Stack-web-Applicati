@@ -56,9 +56,9 @@ function ShopCategory({ banner, category }) {
         </div>
       </div>
       <div className='shopcategory-products'>
-        {filteredProducts.map((item, i) => (
+        {filteredProducts.map((item) => (
           <Item
-            key={i}
+            key={item.id}
             id={item.id}
             name={item.name}
             image={item.image}

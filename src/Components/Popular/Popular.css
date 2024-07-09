@@ -1,24 +1,72 @@
-.popular{
+.popular {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
-    height: 90vh;
-}
-.popular h1{
-   color:#171717;
-   font-size: 50px;
-   font-weight: 600;
+    gap: 20px; /* Increased vertical gap for better spacing */
+    padding: 20px; /* Added padding for better spacing */
 }
 
-.popular hr{
-   width: 200px;
-   height: 6px;
-   border-radius: 10px;
-   background: #252525;
+.popular h1 {
+    color: #171717;
+    font-size: 40px; /* Default font size */
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px; /* Added margin for spacing */
 }
-.popular_item{
-    margin-top: 50px;
-    display: flex;
-    gap: 30px;
+
+.popular hr {
+    width: 150px; /* Default width */
+    height: 4px; /* Default height */
+    border-radius: 5px;
+    background: #252525;
+    margin-bottom: 20px; /* Added margin for spacing */
+}
+
+.popular_item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid layout */
+    gap: 20px; /* Default gap between items */
+    margin-top: 30px; /* Default margin-top */
+    justify-items: center;
+}
+
+.popular_item img {
+    max-width: 100%; /* Ensure images resize appropriately */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .popular h1 {
+        font-size: 36px; /* Adjusted font size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 32px; /* Adjusted font size for smaller screens */
+    }
+
+    .popular hr {
+        width: 120px; /* Further reduced width for smaller screens */
+    }
+
+    .popular_item {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted grid columns for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .popular h1 {
+        font-size: 28px; /* Adjusted font size for extra small screens */
+    }
+
+    .popular hr {
+        width: 100px; /* Further reduced width for extra small screens */
+    }
+
+    .popular_item {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
 }

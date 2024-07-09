@@ -1,47 +1,89 @@
-.hero{
-   height:100vh;
-   background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
-   display: flex;
-}
-
-.hero-left{
-  flex:1;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  gap: 20px;
-  padding-left: 180px;
-  line-height: 1.1;
-}
-
-.hero-left h2{
- color: #090909;
- font-size:26px;
- font-weight:600;
-}
-
-.hero-left p{
-    color:#171717;
-    font-size: 100px;
+.hero {
+    height: 100vh;
+    background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0 20px;
+    line-height: 1.1;
+    text-align: center;
+  }
+  
+  .hero-left h2 {
+    color: #090909;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  .hero-left p {
+    color: #171717;
+    font-size: 50px;
     font-weight: 700;
-}
-.hero-latest-btn{
+  }
+  
+  .hero-latest-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 310px;
+    width: 100%;
+    max-width: 310px;
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
     background: #ff4141;
     color: white;
-    font-size:22px;
+    font-size: 22px;
     font-weight: 500;
-}
-.hero-right{
+  }
+  
+  .hero-right {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .hero {
+      flex-direction: row;
+      padding: 0 40px;
+    }
+  
+    .hero-left {
+      align-items: flex-start;
+      padding-left: 180px;
+      text-align: left;
+    }
+  
+    .hero-left h2 {
+      font-size: 26px;
+    }
+  
+    .hero-left p {
+      font-size: 100px;
+    }
+  
+    .hero-latest-btn {
+      width: 310px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .hero-left {
+      padding-left: 180px;
+    }
+  }
+  

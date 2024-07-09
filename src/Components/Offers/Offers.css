@@ -1,46 +1,125 @@
-.offers{
+.offers {
     width: 65%;
-    height: 60vh;
+    height: auto; /* Adjust height to auto for better responsiveness */
     display: flex;
+    flex-direction: column; /* Set column direction for better stacking on small screens */
     margin: auto;
-    padding: 0px 140px;
+    padding: 20px; /* Adjust padding for better responsiveness */
     margin-bottom: 150px;
     background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 
-.offers-left{
-    flex:1;
+.offers-left {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.offers-left h1{
-    color: #171717;
-    font-size: 80px;
-    font-weight: 600;
-}
-.offers-left p{
-    color:#171717;
-    font-size: 22px;
-    font-weight: 600;
-}
-.offers-left button{
-    width:282px;
-    height:70px;
-    border-radius: 35px;
-    background:#ff4141;
-    border: none;
-    color: white;
-    font-size:22px;
-    font-weight:500;
-    margin-top:30px;
-    cursor:pointer;
+    text-align: center; /* Center align text for better aesthetics on small screens */
+    margin-bottom: 20px; /* Add margin for spacing on small screens */
 }
 
-.offers-right{
+.offers-left h1 {
+    color: #171717;
+    font-size: 40px; /* Adjust font size for better readability on small screens */
+    font-weight: 600;
+}
+
+.offers-left p {
+    color: #171717;
+    font-size: 18px; /* Adjust font size for better readability on small screens */
+    font-weight: 600;
+}
+
+.offers-left button {
+    width: 100%; /* Full width for better responsiveness */
+    max-width: 282px; /* Set maximum width */
+    height: 50px; /* Adjust height for better aesthetics on small screens */
+    border-radius: 25px; /* Adjust border-radius for better aesthetics on small screens */
+    background: #ff4141;
+    border: none;
+    color: white;
+    font-size: 18px; /* Adjust font size for better readability on small screens */
+    font-weight: 500;
+    margin-top: 20px; /* Adjust margin for better spacing */
+    cursor: pointer;
+}
+
+.offers-right {
     flex: 1;
-    display:flex;
+    display: flex;
     align-items: center;
-    justify-content:flex-end;
-    padding-top:50px;
+    justify-content: center; /* Center align for better aesthetics on small screens */
+    padding-top: 20px; /* Adjust padding for better spacing */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .offers {
+        width: 75%;
+        flex-direction: column; /* Stack elements vertically */
+        height: auto;
+        padding: 20px;
+    }
+
+    .offers-left h1 {
+        font-size: 60px; /* Adjust font size for medium screens */
+    }
+
+    .offers-left p {
+        font-size: 20px; /* Adjust font size for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .offers {
+        width: 85%;
+        padding: 10px; /* Reduced padding for smaller screens */
+    }
+
+    .offers-left h1 {
+        font-size: 40px; /* Smaller font size for smaller screens */
+    }
+
+    .offers-left p {
+        font-size: 18px; /* Smaller font size for smaller screens */
+    }
+
+    .offers-left button {
+        width: 100%;
+        max-width: 250px; /* Adjusted max width */
+        height: 45px; /* Adjusted height */
+        font-size: 16px; /* Smaller font size for better readability */
+    }
+
+    .offers-right {
+        padding-top: 10px; /* Reduced padding for better spacing */
+    }
+}
+
+@media (max-width: 480px) {
+    .offers {
+        width: 95%; /* Full width for small screens */
+        padding: 10px; /* Reduced padding */
+        margin-bottom: 100px; /* Reduced bottom margin */
+    }
+
+    .offers-left h1 {
+        font-size: 30px; /* Smaller font size for small screens */
+    }
+
+    .offers-left p {
+        font-size: 16px; /* Smaller font size for small screens */
+    }
+
+    .offers-left button {
+        width: 100%;
+        max-width: 220px; /* Adjusted max width */
+        height: 40px; /* Adjusted height */
+        font-size: 14px; /* Smaller font size for better readability */
+        border-radius: 20px; /* Adjusted border-radius for better aesthetics */
+    }
+
+    .offers-right {
+        padding-top: 10px; /* Reduced padding for better spacing */
+    }
 }

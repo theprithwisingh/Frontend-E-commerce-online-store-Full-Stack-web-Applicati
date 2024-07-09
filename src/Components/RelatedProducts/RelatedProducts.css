@@ -1,24 +1,65 @@
-.relatedproducted{
+.relatedproducted {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    height: 90vh;
+    padding: 20px;
+    height: auto; /* Remove fixed height for responsiveness */
 }
 
-.relatedproducted h1{
-    color:#171717;
-    font-size: 50px;
+.relatedproducted h1 {
+    color: #171717;
+    font-size: 40px; /* Adjusted font size for smaller screens */
     font-weight: 600;
+    margin-bottom: 20px; /* Added margin for spacing */
 }
-.relatedproducted hr{
-    width: 200px;
-    height: 6px;
+
+.relatedproducted hr {
+    width: 120px; /* Reduced width for smaller screens */
+    height: 4px; /* Reduced height for smaller screens */
     border-radius: 10px;
     background: #252525;
+    margin-bottom: 20px; /* Added margin for spacing */
 }
-.relatedproducted-item{
-    margin-top: 50px;
+
+.relatedproducted-item {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center; /* Center items horizontally */
+    gap: 20px; /* Adjusted gap between items */
+    margin-top: 30px; /* Reduced top margin for spacing */
+}
+
+.relatedproducted-item img {
+    max-width: 100%; /* Ensure images resize appropriately */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Added border radius for images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added subtle shadow for depth */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .relatedproducted h1 {
+        font-size: 50px; /* Restore original font size for larger screens */
+    }
+
+    .relatedproducted hr {
+        width: 200px; /* Restore original width for larger screens */
+        height: 6px; /* Restore original height for larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .relatedproducted h1 {
+        font-size: 36px; /* Further reduced font size for smaller screens */
+    }
+
+    .relatedproducted hr {
+        width: 100px; /* Further reduced width for smaller screens */
+        height: 3px; /* Further reduced height for smaller screens */
+    }
+
+    .relatedproducted-item {
+        gap: 10px; /* Reduced gap between items for smaller screens */
+    }
 }

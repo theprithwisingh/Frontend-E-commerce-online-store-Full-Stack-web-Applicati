@@ -127,7 +127,7 @@ cursor: pointer;
 }
 @media (max-width){
     .navbar{
-        padding: 10px 0px;
+        padding: 8px 0px;
     }
     .nav-dropdown{
         display: block;
